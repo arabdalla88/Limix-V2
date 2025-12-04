@@ -1,15 +1,7 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/app.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/app.py"
-    }
-  ]
+  "build": {
+    "builder": "NIXPACKS"
+  },
+  "startCommand": "python run.py api"
 }
