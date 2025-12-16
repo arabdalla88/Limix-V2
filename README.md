@@ -1,4 +1,4 @@
-# 🐟 Limix – Version 2.0  
+# 🐟 LimiX – Version 2.0  
 ## AI-Powered Fish Type Recommendation
 
 ### 📌 Overview
