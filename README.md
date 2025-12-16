@@ -1,29 +1,26 @@
-# Limix Backend 🐟
+# 🐟 Limix – Version 2.0  
+## AI-Powered Fish Type Recommendation
 
-## Setup
-```bash
-pip install -r requirements.txt
-```
+### 📌 Overview
+بناءً على النسخة 1.0، أُضيف **نموذج ذكاء اصطناعي** يُوصي **بأفضل نوع سمك** يناسب الظروف البيئية الحالية في المزرعة.
 
-## Run
-```bash
-# API only
-python run.py api
+### 🧠 المميزات الجديدة
+- ✅ **نموذج تصنيف ذكي** (Machine Learning)
+  - يأخذ: `pH`, `Temperature`, `Turbidity`
+  - يُوصي بنوع سمك مثالي (مثل: Tilapia, Catfish, Carp)
+- دقة توصية تصل لـ **85%+**
+- حفظ التوصيات في Firebase مع **درجة الثقة (confidence)**
+- تكامل كامل مع نظام المراقبة السابق
 
-# Everything (simulator + listener + API)
-python run.py all
-```
+### 📡 البنية التقنية المُحدّثة
+- **AI Model**: Decision Tree (Scikit-learn)
+- **Integration**: Flask backend يستدعي النموذج عند كل قراءة جديدة
+- **Data Flow**:  
+  `Sensors → Firebase → Listener → AI Classifier → Recommendation`
 
-## API Endpoints
-- `GET /api/dashboard` - ⭐ Main endpoint (use this in Flutter)
-- `GET /api/sensor/latest` - Latest reading
-- `GET /api/sensor/history?limit=20` - History for charts
-- `GET /api/recommendation/latest` - Fish recommendation
+### 🎯 الهدف
+> **تخصيص الإنتاج** حسب الظروف الفعلية — لزيادة الإنتاجية وتقليل الهدر.
 
-## Flutter Integration
-```dart
-final response = await http.get(Uri.parse('YOUR-API-URL/api/dashboard'));
-final data = jsonDecode(response.body)['data'];
-print(data['current']['ph']);  // Current pH
-print(data['recommendation']['fish_name']);  // Recommended fish
-```
+---
+
+© 2025 Limix Team – Graduation Project
